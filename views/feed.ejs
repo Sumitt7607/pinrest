@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Nav Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@fortawesome/fontawesome-free/js/all.js"></script> <!-- Include Font Awesome for Icons -->
+</head>
+<body class="bg-gray-100 flex">
+    <nav class="bg-white w-64 h-screen fixed top-0 left-0 shadow-lg">
+        <div class="flex flex-col items-center py-4">
+            <a href="/feed">
+                <img src="/images/uploads/sym.png" alt="Pinterest Logo" class="h-16 mb-8">
+            </a>
+            <ul class="flex flex-col space-y-6">
+                <li>
+                    <a href="/feed" class="flex items-center text-gray-700 hover:text-gray-900">
+                        <i class="fas fa-home text-2xl mr-4" ></i>
+                        <span class="text-lg">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/create" class="flex items-center text-gray-700 hover:text-gray-900">
+                        <i class="fas fa-plus-circle text-2xl mr-4"></i>
+                        <span class="text-lg">Create</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings" class="flex items-center text-gray-700 hover:text-gray-900">
+                        <i class="fas fa-cog text-2xl mr-4"></i>
+                        <span class="text-lg">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="ml-64 p-4">
+        <nav class="bg-white shadow-lg p-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <input type="text" class="border rounded-lg px-4 py-2 mr-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Search...">
+                <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div>
+                <a href="/profile"  class=" hover:text-gray-900 focus:outline-none">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="">
+        <div class="card flex flex wrap  gap-10 px-1 mt-40">
+        
+        <% posts.forEach(function(elem){ %>
+            <div class=" card w-32">
+                <div class="  w-full h-40 bg-red-900 rounded-lg overflow-hidden ">
+                    <img class="w-full h-full object-cover" src="/images/uploads/<%=elem.image %>" alt="">
+                </div>
+                <h5 class="text-black text-sm"><%=elem.tittle %> </h5>
+            
+            </div>
+        <% })%>
+    
+        
+        </div>
+    
+    </div>
+    
+</body>
+</html>
+
+

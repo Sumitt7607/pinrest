@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+  <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+    <img src="/images/uploads/sym.png" class="h-10 w-10  ml-33" alt="">
+    <h2 class="text-2xl font-bold mb-4 ml-8">welcome to Pinterest</h2>
+    <h6 class="text-1xl font-semibold mb-4 ml-20">find new ideas to try</h6>
+    <form action="/login" method="post" >
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-bold mb-2">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Email Address " class="w-full p-2 border border-gray-300 rounded-full">
+        </div>
+        <div class="mb-4">
+            <label for="password" class="block text-gray-700 font-bold mb-2">Password:</label>
+            <input type="password" id="password" name="password" placeholder="create a password" class="w-full p-2 border border-gray-300 rounded-full">
+        </div>
+        <button type="submit" class="w-full bg-red-500 text-white font-bold py-2 px-4 rounded-full  hover:bg-red-700">continue</button>
+        <h1 class="text-center text-1xl font-bold">OR</h1>
+       
+        <a href="/register/google" class="flex items-center bg-white text-gray-700 font-bold py-2 px-4 border border-gray-300 rounded shadow hover:bg-gray-100">
+        <img src="/images/uploads/google.png" alt="Google Icon" class="w-6 h-6 mr-3">
+        Continue with Google
+      </a>
+    </form>
+
+
+</div>
+</form>
+</body>
+</html>
+
